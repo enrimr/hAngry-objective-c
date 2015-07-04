@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		E5FA2FBD1B47DECB00787B3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FBC1B47DECB00787B3C /* main.m */; };
-		E5FA2FC01B47DECB00787B3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FBF1B47DECB00787B3C /* AppDelegate.m */; };
-		E5FA2FC31B47DECB00787B3C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FC21B47DECB00787B3C /* RootViewController.m */; };
-		E5FA2FC61B47DECB00787B3C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FC51B47DECB00787B3C /* DataViewController.m */; };
-		E5FA2FC91B47DECB00787B3C /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FC81B47DECB00787B3C /* ModelController.m */; };
-		E5FA2FCC1B47DECB00787B3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5FA2FCA1B47DECB00787B3C /* Main.storyboard */; };
+		E5FA2FC01B47DECB00787B3C /* ATLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FBF1B47DECB00787B3C /* ATLAppDelegate.m */; };
 		E5FA2FCE1B47DECB00787B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5FA2FCD1B47DECB00787B3C /* Assets.xcassets */; };
 		E5FA2FD11B47DECB00787B3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5FA2FCF1B47DECB00787B3C /* LaunchScreen.storyboard */; };
 		E5FA2FDC1B47DECB00787B3C /* hAngryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FDB1B47DECB00787B3C /* hAngryTests.m */; };
 		E5FA2FE71B47DECB00787B3C /* hAngryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FE61B47DECB00787B3C /* hAngryUITests.m */; };
+		E5FA2FFA1B47E0A100787B3C /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5FA2FF61B47E0A100787B3C /* Keys.plist */; };
+		E5FA30021B47E0F000787B3C /* ENRSimpleCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA30011B47E0F000787B3C /* ENRSimpleCoreDataStack.m */; };
+		E5FA30061B47E36D00787B3C /* ATLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA30041B47E36D00787B3C /* ATLMainViewController.m */; };
+		E5FA30071B47E36D00787B3C /* ATLMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FA30051B47E36D00787B3C /* ATLMainViewController.xib */; };
+		E5FA300A1B47E94E00787B3C /* HANDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA30091B47E94E00787B3C /* HANDefinitions.m */; };
+		E5FA300E1B47E9FE00787B3C /* ENRBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA300D1B47E9FE00787B3C /* ENRBaseApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,15 +41,8 @@
 /* Begin PBXFileReference section */
 		E5FA2FB81B47DECB00787B3C /* hAngry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hAngry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FA2FBC1B47DECB00787B3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E5FA2FBE1B47DECB00787B3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E5FA2FBF1B47DECB00787B3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E5FA2FC11B47DECB00787B3C /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		E5FA2FC21B47DECB00787B3C /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		E5FA2FC41B47DECB00787B3C /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
-		E5FA2FC51B47DECB00787B3C /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
-		E5FA2FC71B47DECB00787B3C /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
-		E5FA2FC81B47DECB00787B3C /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
-		E5FA2FCB1B47DECB00787B3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5FA2FBE1B47DECB00787B3C /* ATLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATLAppDelegate.h; sourceTree = "<group>"; };
+		E5FA2FBF1B47DECB00787B3C /* ATLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATLAppDelegate.m; sourceTree = "<group>"; };
 		E5FA2FCD1B47DECB00787B3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5FA2FD01B47DECB00787B3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5FA2FD21B47DECB00787B3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +52,17 @@
 		E5FA2FE21B47DECB00787B3C /* hAngryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hAngryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FA2FE61B47DECB00787B3C /* hAngryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hAngryUITests.m; sourceTree = "<group>"; };
 		E5FA2FE81B47DECB00787B3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5FA2FF51B47E0A100787B3C /* hAngry-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hAngry-PrefixHeader.pch"; sourceTree = "<group>"; };
+		E5FA2FF61B47E0A100787B3C /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		E5FA30001B47E0F000787B3C /* ENRSimpleCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENRSimpleCoreDataStack.h; path = Models/ENRSimpleCoreDataStack.h; sourceTree = "<group>"; };
+		E5FA30011B47E0F000787B3C /* ENRSimpleCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENRSimpleCoreDataStack.m; path = Models/ENRSimpleCoreDataStack.m; sourceTree = "<group>"; };
+		E5FA30031B47E36D00787B3C /* ATLMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATLMainViewController.h; path = Controllers/ATLMainViewController.h; sourceTree = "<group>"; };
+		E5FA30041B47E36D00787B3C /* ATLMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATLMainViewController.m; path = Controllers/ATLMainViewController.m; sourceTree = "<group>"; };
+		E5FA30051B47E36D00787B3C /* ATLMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATLMainViewController.xib; path = Controllers/ATLMainViewController.xib; sourceTree = "<group>"; };
+		E5FA30081B47E94E00787B3C /* HANDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANDefinitions.h; sourceTree = "<group>"; };
+		E5FA30091B47E94E00787B3C /* HANDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANDefinitions.m; sourceTree = "<group>"; };
+		E5FA300C1B47E9FE00787B3C /* ENRBaseApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENRBaseApi.h; path = API/ENRBaseApi.h; sourceTree = "<group>"; };
+		E5FA300D1B47E9FE00787B3C /* ENRBaseApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENRBaseApi.m; path = API/ENRBaseApi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,15 +113,16 @@
 		E5FA2FBA1B47DECB00787B3C /* hAngry */ = {
 			isa = PBXGroup;
 			children = (
-				E5FA2FBE1B47DECB00787B3C /* AppDelegate.h */,
-				E5FA2FBF1B47DECB00787B3C /* AppDelegate.m */,
-				E5FA2FC11B47DECB00787B3C /* RootViewController.h */,
-				E5FA2FC21B47DECB00787B3C /* RootViewController.m */,
-				E5FA2FC41B47DECB00787B3C /* DataViewController.h */,
-				E5FA2FC51B47DECB00787B3C /* DataViewController.m */,
-				E5FA2FC71B47DECB00787B3C /* ModelController.h */,
-				E5FA2FC81B47DECB00787B3C /* ModelController.m */,
-				E5FA2FCA1B47DECB00787B3C /* Main.storyboard */,
+				E5FA300B1B47E9E100787B3C /* API */,
+				E5FA30081B47E94E00787B3C /* HANDefinitions.h */,
+				E5FA30091B47E94E00787B3C /* HANDefinitions.m */,
+				E5FA2FFF1B47E0E400787B3C /* Utils */,
+				E5FA2FFE1B47E0DE00787B3C /* Controllers */,
+				E5FA2FFD1B47E0D800787B3C /* Models */,
+				E5FA2FF51B47E0A100787B3C /* hAngry-PrefixHeader.pch */,
+				E5FA2FF61B47E0A100787B3C /* Keys.plist */,
+				E5FA2FBE1B47DECB00787B3C /* ATLAppDelegate.h */,
+				E5FA2FBF1B47DECB00787B3C /* ATLAppDelegate.m */,
 				E5FA2FCD1B47DECB00787B3C /* Assets.xcassets */,
 				E5FA2FCF1B47DECB00787B3C /* LaunchScreen.storyboard */,
 				E5FA2FD21B47DECB00787B3C /* Info.plist */,
@@ -148,6 +155,41 @@
 				E5FA2FE81B47DECB00787B3C /* Info.plist */,
 			);
 			path = hAngryUITests;
+			sourceTree = "<group>";
+		};
+		E5FA2FFD1B47E0D800787B3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA30001B47E0F000787B3C /* ENRSimpleCoreDataStack.h */,
+				E5FA30011B47E0F000787B3C /* ENRSimpleCoreDataStack.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E5FA2FFE1B47E0DE00787B3C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA30031B47E36D00787B3C /* ATLMainViewController.h */,
+				E5FA30041B47E36D00787B3C /* ATLMainViewController.m */,
+				E5FA30051B47E36D00787B3C /* ATLMainViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E5FA2FFF1B47E0E400787B3C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		E5FA300B1B47E9E100787B3C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA300C1B47E9FE00787B3C /* ENRBaseApi.h */,
+				E5FA300D1B47E9FE00787B3C /* ENRBaseApi.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,11 +254,13 @@
 		E5FA2FB01B47DECB00787B3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ATL;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Atlanpix SLU";
 				TargetAttributes = {
 					E5FA2FB71B47DECB00787B3C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 6WYT3SQB6G;
 					};
 					E5FA2FD61B47DECB00787B3C = {
 						CreatedOnToolsVersion = 7.0;
@@ -253,9 +297,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FA2FFA1B47E0A100787B3C /* Keys.plist in Resources */,
 				E5FA2FD11B47DECB00787B3C /* LaunchScreen.storyboard in Resources */,
 				E5FA2FCE1B47DECB00787B3C /* Assets.xcassets in Resources */,
-				E5FA2FCC1B47DECB00787B3C /* Main.storyboard in Resources */,
+				E5FA30071B47E36D00787B3C /* ATLMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5FA2FC61B47DECB00787B3C /* DataViewController.m in Sources */,
-				E5FA2FC01B47DECB00787B3C /* AppDelegate.m in Sources */,
-				E5FA2FC91B47DECB00787B3C /* ModelController.m in Sources */,
+				E5FA2FC01B47DECB00787B3C /* ATLAppDelegate.m in Sources */,
+				E5FA300E1B47E9FE00787B3C /* ENRBaseApi.m in Sources */,
+				E5FA30021B47E0F000787B3C /* ENRSimpleCoreDataStack.m in Sources */,
+				E5FA300A1B47E94E00787B3C /* HANDefinitions.m in Sources */,
 				E5FA2FBD1B47DECB00787B3C /* main.m in Sources */,
-				E5FA2FC31B47DECB00787B3C /* RootViewController.m in Sources */,
+				E5FA30061B47E36D00787B3C /* ATLMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,14 +366,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E5FA2FCA1B47DECB00787B3C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E5FA2FCB1B47DECB00787B3C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E5FA2FCF1B47DECB00787B3C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -423,6 +461,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "hAngry/hAngry-PrefixHeader.pch";
 				INFOPLIST_FILE = hAngry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.atlanpix.hAngry;
@@ -434,6 +474,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "hAngry/hAngry-PrefixHeader.pch";
 				INFOPLIST_FILE = hAngry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.atlanpix.hAngry;
@@ -508,6 +550,7 @@
 				E5FA2FED1B47DECB00787B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5FA2FEE1B47DECB00787B3C /* Build configuration list for PBXNativeTarget "hAngryTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +559,7 @@
 				E5FA2FF01B47DECB00787B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5FA2FF11B47DECB00787B3C /* Build configuration list for PBXNativeTarget "hAngryUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +568,7 @@
 				E5FA2FF31B47DECB00787B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
