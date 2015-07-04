@@ -19,6 +19,7 @@
 		E5FA30071B47E36D00787B3C /* ATLMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FA30051B47E36D00787B3C /* ATLMainViewController.xib */; };
 		E5FA300A1B47E94E00787B3C /* HANDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA30091B47E94E00787B3C /* HANDefinitions.m */; };
 		E5FA300E1B47E9FE00787B3C /* ENRBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA300D1B47E9FE00787B3C /* ENRBaseApi.m */; };
+		E5FA301D1B48385200787B3C /* hAngry-iso.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA301C1B48385200787B3C /* hAngry-iso.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		E5FA30091B47E94E00787B3C /* HANDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANDefinitions.m; sourceTree = "<group>"; };
 		E5FA300C1B47E9FE00787B3C /* ENRBaseApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENRBaseApi.h; path = API/ENRBaseApi.h; sourceTree = "<group>"; };
 		E5FA300D1B47E9FE00787B3C /* ENRBaseApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENRBaseApi.m; path = API/ENRBaseApi.m; sourceTree = "<group>"; };
+		E5FA301C1B48385200787B3C /* hAngry-iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hAngry-iso.png"; path = "Resources/Images/hAngry-iso.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				E5FA2FDA1B47DECB00787B3C /* hAngryTests */,
 				E5FA2FE51B47DECB00787B3C /* hAngryUITests */,
 				E5FA2FB91B47DECB00787B3C /* Products */,
+				E5FA30191B47FE3700787B3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +116,7 @@
 		E5FA2FBA1B47DECB00787B3C /* hAngry */ = {
 			isa = PBXGroup;
 			children = (
+				E5FA301A1B48382100787B3C /* Resources */,
 				E5FA300B1B47E9E100787B3C /* API */,
 				E5FA30081B47E94E00787B3C /* HANDefinitions.h */,
 				E5FA30091B47E94E00787B3C /* HANDefinitions.m */,
@@ -190,6 +194,29 @@
 				E5FA300D1B47E9FE00787B3C /* ENRBaseApi.m */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		E5FA30191B47FE3700787B3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5FA301A1B48382100787B3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA301B1B48382D00787B3C /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E5FA301B1B48382D00787B3C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA301C1B48385200787B3C /* hAngry-iso.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5FA2FFA1B47E0A100787B3C /* Keys.plist in Resources */,
+				E5FA301D1B48385200787B3C /* hAngry-iso.png in Resources */,
 				E5FA2FD11B47DECB00787B3C /* LaunchScreen.storyboard in Resources */,
 				E5FA2FCE1B47DECB00787B3C /* Assets.xcassets in Resources */,
 				E5FA30071B47E36D00787B3C /* ATLMainViewController.xib in Resources */,
@@ -416,6 +444,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -452,6 +481,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

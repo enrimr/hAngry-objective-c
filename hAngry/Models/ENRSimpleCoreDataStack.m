@@ -29,7 +29,7 @@
 - (NSManagedObjectContext *)context
 {
     if (_context == nil) {
-        _context = [[NSManagedObjectContext alloc] init];
+        _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];//[[NSManagedObjectContext alloc] init]; //NSMainQueueConcurrencyType
         _context.persistentStoreCoordinator = self.storeCoordinator;
     }
     
