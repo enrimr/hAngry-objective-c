@@ -29,6 +29,7 @@
 		E56A64D31B52E95F008E18AA /* HANFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64CB1B52E95F008E18AA /* HANFood.m */; };
 		E56A64D41B52E95F008E18AA /* HANFoodAmount.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64CD1B52E95F008E18AA /* HANFoodAmount.m */; };
 		E56A64D51B52E95F008E18AA /* HANFoodType.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64CF1B52E95F008E18AA /* HANFoodType.m */; };
+		E56A64D81B52EB19008E18AA /* HANFoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64D71B52EB19008E18AA /* HANFoodTableViewController.m */; };
 		E5FA2FBD1B47DECB00787B3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FBC1B47DECB00787B3C /* main.m */; };
 		E5FA2FC01B47DECB00787B3C /* ATLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FBF1B47DECB00787B3C /* ATLAppDelegate.m */; };
 		E5FA2FCE1B47DECB00787B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5FA2FCD1B47DECB00787B3C /* Assets.xcassets */; };
@@ -77,6 +78,8 @@
 		E56A64CD1B52E95F008E18AA /* HANFoodAmount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFoodAmount.m; path = Models/HANFoodAmount.m; sourceTree = "<group>"; };
 		E56A64CE1B52E95F008E18AA /* HANFoodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANFoodType.h; path = Models/HANFoodType.h; sourceTree = "<group>"; };
 		E56A64CF1B52E95F008E18AA /* HANFoodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFoodType.m; path = Models/HANFoodType.m; sourceTree = "<group>"; };
+		E56A64D61B52EB19008E18AA /* HANFoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANFoodTableViewController.h; path = Controllers/HANFoodTableViewController.h; sourceTree = "<group>"; };
+		E56A64D71B52EB19008E18AA /* HANFoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFoodTableViewController.m; path = Controllers/HANFoodTableViewController.m; sourceTree = "<group>"; };
 		E5FA2FB81B47DECB00787B3C /* hAngry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hAngry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FA2FBC1B47DECB00787B3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5FA2FBE1B47DECB00787B3C /* ATLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATLAppDelegate.h; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				E5FA30031B47E36D00787B3C /* ATLMainViewController.h */,
 				E5FA30041B47E36D00787B3C /* ATLMainViewController.m */,
 				E5FA30051B47E36D00787B3C /* ATLMainViewController.xib */,
+				E56A64D61B52EB19008E18AA /* HANFoodTableViewController.h */,
+				E56A64D71B52EB19008E18AA /* HANFoodTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -333,7 +338,7 @@
 		E5FA2FB01B47DECB00787B3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = ATL;
+				CLASSPREFIX = HAN;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Atlanpix SLU";
 				TargetAttributes = {
@@ -432,6 +437,7 @@
 				E56A64BB1B52DDCD008E18AA /* ENRCoreDataTableViewController.m in Sources */,
 				E56A64D11B52E95F008E18AA /* _HANFoodAmount.m in Sources */,
 				E5FA300E1B47E9FE00787B3C /* ENRBaseApi.m in Sources */,
+				E56A64D81B52EB19008E18AA /* HANFoodTableViewController.m in Sources */,
 				E56A64BE1B52E127008E18AA /* Model.xcdatamodeld in Sources */,
 				E56A64D31B52E95F008E18AA /* HANFood.m in Sources */,
 				E56A64D51B52E95F008E18AA /* HANFoodType.m in Sources */,

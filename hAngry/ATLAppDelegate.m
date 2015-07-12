@@ -7,7 +7,9 @@
 //
 
 #import "ATLAppDelegate.h"
-#import "ATLMainViewController.h"
+#import "ENRSimpleCoreDataStack.h"
+#import "HANFoodTableViewController.h"
+#import "HANFood.h"
 
 @interface ATLAppDelegate ()
 
@@ -22,10 +24,21 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    ATLMainViewController *mainVC = [[ATLMainViewController alloc] init];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[HANFood entityName]];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:HANFoodAttributes.updateDate
+                                                              ascending:NO],
+                                [NSSortDescriptor sortDescriptorWithKey:HANFoodAttributes.name
+                                                              ascending:YES]];
+    NSFetchedResultsController *results = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                          managedObjectContext:self.model.context
+                                                                            sectionNameKeyPath:nil
+                                                                                     cacheName:nil];
     
-    UINavigationController *randomcoNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    self.window.rootViewController = randomcoNav;
+    HANFoodTableViewController *mainVC = [[HANFoodTableViewController alloc] initWithFetchedResultsController:results
+                                                                                                        style:UITableViewStylePlain];
+    
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    self.window.rootViewController = nvc;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
