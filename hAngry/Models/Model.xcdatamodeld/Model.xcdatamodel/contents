@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8118.17" systemVersion="14E36b" minimumToolsVersion="Xcode 7.0">
-    <entity name="Food" syncable="YES">
+    <entity name="Food" representedClassName="HANFood" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="foodId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,7 +8,7 @@
         <relationship name="availableAmount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodAmount" inverseName="bought" inverseEntity="FoodAmount" syncable="YES"/>
         <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodType" inverseName="food" inverseEntity="FoodType" syncable="YES"/>
     </entity>
-    <entity name="FoodAmount" syncable="YES">
+    <entity name="FoodAmount" representedClassName="HANFoodAmount" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="expirationDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -18,7 +18,7 @@
         <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="bought" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="availableAmount" inverseEntity="Food" syncable="YES"/>
     </entity>
-    <entity name="FoodType" syncable="YES">
+    <entity name="FoodType" representedClassName="HANFoodType" syncable="YES">
         <attribute name="foodTypeId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="food" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="type" inverseEntity="Food" syncable="YES"/>

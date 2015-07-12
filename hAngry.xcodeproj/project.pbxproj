@@ -6,9 +6,29 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E56A64BF1B52E686008E18AA /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E56A64C01B52E686008E18AA /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				E56A64C31B52E6B8008E18AA /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		E56A64BB1B52DDCD008E18AA /* ENRCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64BA1B52DDCD008E18AA /* ENRCoreDataTableViewController.m */; };
 		E56A64BE1B52E127008E18AA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56A64BC1B52E127008E18AA /* Model.xcdatamodeld */; };
+		E56A64D01B52E95F008E18AA /* _HANFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64C51B52E95F008E18AA /* _HANFood.m */; };
+		E56A64D11B52E95F008E18AA /* _HANFoodAmount.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64C71B52E95F008E18AA /* _HANFoodAmount.m */; };
+		E56A64D21B52E95F008E18AA /* _HANFoodType.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64C91B52E95F008E18AA /* _HANFoodType.m */; };
+		E56A64D31B52E95F008E18AA /* HANFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64CB1B52E95F008E18AA /* HANFood.m */; };
+		E56A64D41B52E95F008E18AA /* HANFoodAmount.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64CD1B52E95F008E18AA /* HANFoodAmount.m */; };
+		E56A64D51B52E95F008E18AA /* HANFoodType.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64CF1B52E95F008E18AA /* HANFoodType.m */; };
 		E5FA2FBD1B47DECB00787B3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FBC1B47DECB00787B3C /* main.m */; };
 		E5FA2FC01B47DECB00787B3C /* ATLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FA2FBF1B47DECB00787B3C /* ATLAppDelegate.m */; };
 		E5FA2FCE1B47DECB00787B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5FA2FCD1B47DECB00787B3C /* Assets.xcassets */; };
@@ -45,6 +65,18 @@
 		E56A64B91B52DDCD008E18AA /* ENRCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENRCoreDataTableViewController.h; path = Controllers/ENRCoreDataTableViewController.h; sourceTree = "<group>"; };
 		E56A64BA1B52DDCD008E18AA /* ENRCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENRCoreDataTableViewController.m; path = Controllers/ENRCoreDataTableViewController.m; sourceTree = "<group>"; };
 		E56A64BD1B52E127008E18AA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E56A64C41B52E95F008E18AA /* _HANFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _HANFood.h; path = Models/_HANFood.h; sourceTree = "<group>"; };
+		E56A64C51B52E95F008E18AA /* _HANFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _HANFood.m; path = Models/_HANFood.m; sourceTree = "<group>"; };
+		E56A64C61B52E95F008E18AA /* _HANFoodAmount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _HANFoodAmount.h; path = Models/_HANFoodAmount.h; sourceTree = "<group>"; };
+		E56A64C71B52E95F008E18AA /* _HANFoodAmount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _HANFoodAmount.m; path = Models/_HANFoodAmount.m; sourceTree = "<group>"; };
+		E56A64C81B52E95F008E18AA /* _HANFoodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _HANFoodType.h; path = Models/_HANFoodType.h; sourceTree = "<group>"; };
+		E56A64C91B52E95F008E18AA /* _HANFoodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _HANFoodType.m; path = Models/_HANFoodType.m; sourceTree = "<group>"; };
+		E56A64CA1B52E95F008E18AA /* HANFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANFood.h; path = Models/HANFood.h; sourceTree = "<group>"; };
+		E56A64CB1B52E95F008E18AA /* HANFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFood.m; path = Models/HANFood.m; sourceTree = "<group>"; };
+		E56A64CC1B52E95F008E18AA /* HANFoodAmount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANFoodAmount.h; path = Models/HANFoodAmount.h; sourceTree = "<group>"; };
+		E56A64CD1B52E95F008E18AA /* HANFoodAmount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFoodAmount.m; path = Models/HANFoodAmount.m; sourceTree = "<group>"; };
+		E56A64CE1B52E95F008E18AA /* HANFoodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANFoodType.h; path = Models/HANFoodType.h; sourceTree = "<group>"; };
+		E56A64CF1B52E95F008E18AA /* HANFoodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFoodType.m; path = Models/HANFoodType.m; sourceTree = "<group>"; };
 		E5FA2FB81B47DECB00787B3C /* hAngry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hAngry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FA2FBC1B47DECB00787B3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5FA2FBE1B47DECB00787B3C /* ATLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATLAppDelegate.h; sourceTree = "<group>"; };
@@ -169,6 +201,18 @@
 		E5FA2FFD1B47E0D800787B3C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E56A64C41B52E95F008E18AA /* _HANFood.h */,
+				E56A64C51B52E95F008E18AA /* _HANFood.m */,
+				E56A64C61B52E95F008E18AA /* _HANFoodAmount.h */,
+				E56A64C71B52E95F008E18AA /* _HANFoodAmount.m */,
+				E56A64C81B52E95F008E18AA /* _HANFoodType.h */,
+				E56A64C91B52E95F008E18AA /* _HANFoodType.m */,
+				E56A64CA1B52E95F008E18AA /* HANFood.h */,
+				E56A64CB1B52E95F008E18AA /* HANFood.m */,
+				E56A64CC1B52E95F008E18AA /* HANFoodAmount.h */,
+				E56A64CD1B52E95F008E18AA /* HANFoodAmount.m */,
+				E56A64CE1B52E95F008E18AA /* HANFoodType.h */,
+				E56A64CF1B52E95F008E18AA /* HANFoodType.m */,
 				E5FA30001B47E0F000787B3C /* ENRSimpleCoreDataStack.h */,
 				E5FA30011B47E0F000787B3C /* ENRSimpleCoreDataStack.m */,
 				E56A64BC1B52E127008E18AA /* Model.xcdatamodeld */,
@@ -293,6 +337,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Atlanpix SLU";
 				TargetAttributes = {
+					E56A64BF1B52E686008E18AA = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					E5FA2FB71B47DECB00787B3C = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 6WYT3SQB6G;
@@ -323,6 +370,7 @@
 				E5FA2FB71B47DECB00787B3C /* hAngry */,
 				E5FA2FD61B47DECB00787B3C /* hAngryTests */,
 				E5FA2FE11B47DECB00787B3C /* hAngryUITests */,
+				E56A64BF1B52E686008E18AA /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -356,15 +404,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E56A64C31B52E6B8008E18AA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/mogenerator -m \"${PROJECT_DIR}/hAngry/Models/Model.xcdatamodeld\" -O \"${PROJECT_DIR}/hAngry/Models\" --template-var arc=true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5FA2FB41B47DECB00787B3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56A64D21B52E95F008E18AA /* _HANFoodType.m in Sources */,
+				E56A64D41B52E95F008E18AA /* HANFoodAmount.m in Sources */,
 				E5FA2FC01B47DECB00787B3C /* ATLAppDelegate.m in Sources */,
+				E56A64D01B52E95F008E18AA /* _HANFood.m in Sources */,
 				E56A64BB1B52DDCD008E18AA /* ENRCoreDataTableViewController.m in Sources */,
+				E56A64D11B52E95F008E18AA /* _HANFoodAmount.m in Sources */,
 				E5FA300E1B47E9FE00787B3C /* ENRBaseApi.m in Sources */,
 				E56A64BE1B52E127008E18AA /* Model.xcdatamodeld in Sources */,
+				E56A64D31B52E95F008E18AA /* HANFood.m in Sources */,
+				E56A64D51B52E95F008E18AA /* HANFoodType.m in Sources */,
 				E5FA30021B47E0F000787B3C /* ENRSimpleCoreDataStack.m in Sources */,
 				E5FA300A1B47E94E00787B3C /* HANDefinitions.m in Sources */,
 				E5FA2FBD1B47DECB00787B3C /* main.m in Sources */,
@@ -415,6 +485,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E56A64C11B52E686008E18AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E56A64C21B52E686008E18AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E5FA2FE91B47DECB00787B3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -574,6 +658,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E56A64C01B52E686008E18AA /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56A64C11B52E686008E18AA /* Debug */,
+				E56A64C21B52E686008E18AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E5FA2FB31B47DECB00787B3C /* Build configuration list for PBXProject "hAngry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
