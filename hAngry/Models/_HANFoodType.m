@@ -4,11 +4,14 @@
 #import "_HANFoodType.h"
 
 const struct HANFoodTypeAttributes HANFoodTypeAttributes = {
+	.creationDate = @"creationDate",
 	.foodTypeId = @"foodTypeId",
+	.modificationDate = @"modificationDate",
 	.name = @"name",
 };
 
 const struct HANFoodTypeRelationships HANFoodTypeRelationships = {
+	.category = @"category",
 	.food = @"food",
 };
 
@@ -47,6 +50,8 @@ const struct HANFoodTypeRelationships HANFoodTypeRelationships = {
 	return keyPaths;
 }
 
+@dynamic creationDate;
+
 @dynamic foodTypeId;
 
 - (int64_t)foodTypeIdValue {
@@ -67,7 +72,11 @@ const struct HANFoodTypeRelationships HANFoodTypeRelationships = {
 	[self setPrimitiveFoodTypeId:[NSNumber numberWithLongLong:value_]];
 }
 
+@dynamic modificationDate;
+
 @dynamic name;
+
+@dynamic category;
 
 @dynamic food;
 

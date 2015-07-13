@@ -31,7 +31,7 @@
     }
 
     // Sync model with cell
-    [[cell textLabel] setText:[food name]];
+    cell.textLabel.text = [food name];
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     cell.detailTextLabel.text = [fmt stringFromDate:food.updateDate];
     

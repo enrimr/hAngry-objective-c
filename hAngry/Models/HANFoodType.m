@@ -8,6 +8,18 @@
 
 @implementation HANFoodType
 
-// Custom logic goes here.
++(instancetype)foodTypeWithName:(NSString *)name
+                     foodTypeId:(NSNumber *)foodTypeId
+                        context:(NSManagedObjectContext *)context{
+    HANFoodType *foodType = [NSEntityDescription insertNewObjectForEntityForName:[HANFoodType entityName]
+                                                          inManagedObjectContext:context];
+    
+    foodType.name = name;
+    foodType.foodTypeId = foodTypeId;
+    foodType.creationDate = [NSDate date];
+    foodType.modificationDate = [NSDate date];
+    
+    return foodType;
+}
 
 @end

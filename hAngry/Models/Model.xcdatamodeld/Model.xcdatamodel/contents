@@ -3,9 +3,9 @@
     <entity name="Food" representedClassName="HANFood" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="foodId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="availableAmount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodAmount" inverseName="bought" inverseEntity="FoodAmount" syncable="YES"/>
+        <relationship name="availableAmount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodAmount" inverseName="foods" inverseEntity="FoodAmount" syncable="YES"/>
         <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodType" inverseName="food" inverseEntity="FoodType" syncable="YES"/>
     </entity>
     <entity name="FoodAmount" representedClassName="HANFoodAmount" syncable="YES">
@@ -14,18 +14,29 @@
         <attribute name="expirationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="foodAmountId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="measureUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="bought" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="availableAmount" inverseEntity="Food" syncable="YES"/>
+        <relationship name="foods" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="availableAmount" inverseEntity="Food" syncable="YES"/>
+    </entity>
+    <entity name="FoodPyramCategory" representedClassName="HANFoodPyramCategory" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="foodPyramId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="types" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodType" inverseName="category" inverseEntity="FoodType" syncable="YES"/>
     </entity>
     <entity name="FoodType" representedClassName="HANFoodType" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="foodTypeId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodPyramCategory" inverseName="types" inverseEntity="FoodPyramCategory" syncable="YES"/>
         <relationship name="food" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="type" inverseEntity="Food" syncable="YES"/>
     </entity>
     <elements>
         <element name="Food" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="FoodAmount" positionX="-54" positionY="27" width="128" height="165"/>
-        <element name="FoodType" positionX="-45" positionY="54" width="128" height="90"/>
+        <element name="FoodType" positionX="-45" positionY="54" width="128" height="135"/>
+        <element name="FoodPyramCategory" positionX="-63" positionY="72" width="128" height="120"/>
     </elements>
 </model>

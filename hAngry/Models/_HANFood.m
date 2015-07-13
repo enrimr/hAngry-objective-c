@@ -6,8 +6,8 @@
 const struct HANFoodAttributes HANFoodAttributes = {
 	.creationDate = @"creationDate",
 	.foodId = @"foodId",
+	.modificationDate = @"modificationDate",
 	.name = @"name",
-	.updateDate = @"updateDate",
 };
 
 const struct HANFoodRelationships HANFoodRelationships = {
@@ -72,9 +72,9 @@ const struct HANFoodRelationships HANFoodRelationships = {
 	[self setPrimitiveFoodId:[NSNumber numberWithLongLong:value_]];
 }
 
-@dynamic name;
+@dynamic modificationDate;
 
-@dynamic updateDate;
+@dynamic name;
 
 @dynamic availableAmount;
 

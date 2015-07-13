@@ -9,12 +9,12 @@ extern const struct HANFoodAmountAttributes {
 	__unsafe_unretained NSString *expirationDate;
 	__unsafe_unretained NSString *foodAmountId;
 	__unsafe_unretained NSString *measureUnit;
+	__unsafe_unretained NSString *modificationDate;
 	__unsafe_unretained NSString *price;
-	__unsafe_unretained NSString *updateDate;
 } HANFoodAmountAttributes;
 
 extern const struct HANFoodAmountRelationships {
-	__unsafe_unretained NSString *bought;
+	__unsafe_unretained NSString *foods;
 } HANFoodAmountRelationships;
 
 @class HANFood;
@@ -56,6 +56,10 @@ extern const struct HANFoodAmountRelationships {
 
 //- (BOOL)validateMeasureUnit:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSDate* modificationDate;
+
+//- (BOOL)validateModificationDate:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) NSNumber* price;
 
 @property (atomic) float priceValue;
@@ -64,13 +68,9 @@ extern const struct HANFoodAmountRelationships {
 
 //- (BOOL)validatePrice:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSDate* updateDate;
+@property (nonatomic, strong) HANFood *foods;
 
-//- (BOOL)validateUpdateDate:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) HANFood *bought;
-
-//- (BOOL)validateBought:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateFoods:(id*)value_ error:(NSError**)error_;
 
 @end
 
@@ -97,16 +97,16 @@ extern const struct HANFoodAmountRelationships {
 - (NSString*)primitiveMeasureUnit;
 - (void)setPrimitiveMeasureUnit:(NSString*)value;
 
+- (NSDate*)primitiveModificationDate;
+- (void)setPrimitiveModificationDate:(NSDate*)value;
+
 - (NSNumber*)primitivePrice;
 - (void)setPrimitivePrice:(NSNumber*)value;
 
 - (float)primitivePriceValue;
 - (void)setPrimitivePriceValue:(float)value_;
 
-- (NSDate*)primitiveUpdateDate;
-- (void)setPrimitiveUpdateDate:(NSDate*)value;
-
-- (HANFood*)primitiveBought;
-- (void)setPrimitiveBought:(HANFood*)value;
+- (HANFood*)primitiveFoods;
+- (void)setPrimitiveFoods:(HANFood*)value;
 
 @end

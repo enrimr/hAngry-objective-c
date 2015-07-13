@@ -6,8 +6,8 @@
 extern const struct HANFoodAttributes {
 	__unsafe_unretained NSString *creationDate;
 	__unsafe_unretained NSString *foodId;
+	__unsafe_unretained NSString *modificationDate;
 	__unsafe_unretained NSString *name;
-	__unsafe_unretained NSString *updateDate;
 } HANFoodAttributes;
 
 extern const struct HANFoodRelationships {
@@ -39,13 +39,13 @@ extern const struct HANFoodRelationships {
 
 //- (BOOL)validateFoodId:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSDate* modificationDate;
+
+//- (BOOL)validateModificationDate:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) NSString* name;
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSDate* updateDate;
-
-//- (BOOL)validateUpdateDate:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) HANFoodAmount *availableAmount;
 
@@ -68,11 +68,11 @@ extern const struct HANFoodRelationships {
 - (int64_t)primitiveFoodIdValue;
 - (void)setPrimitiveFoodIdValue:(int64_t)value_;
 
+- (NSDate*)primitiveModificationDate;
+- (void)setPrimitiveModificationDate:(NSDate*)value;
+
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
-
-- (NSDate*)primitiveUpdateDate;
-- (void)setPrimitiveUpdateDate:(NSDate*)value;
 
 - (HANFoodAmount*)primitiveAvailableAmount;
 - (void)setPrimitiveAvailableAmount:(HANFoodAmount*)value;

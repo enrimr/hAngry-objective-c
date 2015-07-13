@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		E54D843B1B539FA900BBA2DF /* _HANFoodPyramCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D84381B539FA900BBA2DF /* _HANFoodPyramCategory.m */; };
+		E54D843C1B539FA900BBA2DF /* HANFoodPyramCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D843A1B539FA900BBA2DF /* HANFoodPyramCategory.m */; };
 		E56A64BB1B52DDCD008E18AA /* ENRCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64BA1B52DDCD008E18AA /* ENRCoreDataTableViewController.m */; };
 		E56A64BE1B52E127008E18AA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56A64BC1B52E127008E18AA /* Model.xcdatamodeld */; };
 		E56A64D01B52E95F008E18AA /* _HANFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64C51B52E95F008E18AA /* _HANFood.m */; };
@@ -63,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E54D84371B539FA900BBA2DF /* _HANFoodPyramCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _HANFoodPyramCategory.h; path = Models/_HANFoodPyramCategory.h; sourceTree = "<group>"; };
+		E54D84381B539FA900BBA2DF /* _HANFoodPyramCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _HANFoodPyramCategory.m; path = Models/_HANFoodPyramCategory.m; sourceTree = "<group>"; };
+		E54D84391B539FA900BBA2DF /* HANFoodPyramCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANFoodPyramCategory.h; path = Models/HANFoodPyramCategory.h; sourceTree = "<group>"; };
+		E54D843A1B539FA900BBA2DF /* HANFoodPyramCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFoodPyramCategory.m; path = Models/HANFoodPyramCategory.m; sourceTree = "<group>"; };
 		E56A64B91B52DDCD008E18AA /* ENRCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENRCoreDataTableViewController.h; path = Controllers/ENRCoreDataTableViewController.h; sourceTree = "<group>"; };
 		E56A64BA1B52DDCD008E18AA /* ENRCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENRCoreDataTableViewController.m; path = Controllers/ENRCoreDataTableViewController.m; sourceTree = "<group>"; };
 		E56A64BD1B52E127008E18AA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -204,6 +210,10 @@
 		E5FA2FFD1B47E0D800787B3C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E54D84371B539FA900BBA2DF /* _HANFoodPyramCategory.h */,
+				E54D84381B539FA900BBA2DF /* _HANFoodPyramCategory.m */,
+				E54D84391B539FA900BBA2DF /* HANFoodPyramCategory.h */,
+				E54D843A1B539FA900BBA2DF /* HANFoodPyramCategory.m */,
 				E56A64C41B52E95F008E18AA /* _HANFood.h */,
 				E56A64C51B52E95F008E18AA /* _HANFood.m */,
 				E56A64C61B52E95F008E18AA /* _HANFoodAmount.h */,
@@ -435,8 +445,10 @@
 				E5FA2FC01B47DECB00787B3C /* ATLAppDelegate.m in Sources */,
 				E56A64D01B52E95F008E18AA /* _HANFood.m in Sources */,
 				E56A64BB1B52DDCD008E18AA /* ENRCoreDataTableViewController.m in Sources */,
+				E54D843C1B539FA900BBA2DF /* HANFoodPyramCategory.m in Sources */,
 				E56A64D11B52E95F008E18AA /* _HANFoodAmount.m in Sources */,
 				E5FA300E1B47E9FE00787B3C /* ENRBaseApi.m in Sources */,
+				E54D843B1B539FA900BBA2DF /* _HANFoodPyramCategory.m in Sources */,
 				E56A64D81B52EB19008E18AA /* HANFoodTableViewController.m in Sources */,
 				E56A64BE1B52E127008E18AA /* Model.xcdatamodeld in Sources */,
 				E56A64D31B52E95F008E18AA /* HANFood.m in Sources */,
@@ -671,6 +683,7 @@
 				E56A64C21B52E686008E18AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5FA2FB31B47DECB00787B3C /* Build configuration list for PBXProject "hAngry" */ = {
 			isa = XCConfigurationList;
