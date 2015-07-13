@@ -1,43 +1,43 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to HANFood.h instead.
+// Make changes to HANFoodCategory.h instead.
 
 #import <CoreData/CoreData.h>
 
-extern const struct HANFoodAttributes {
+extern const struct HANFoodCategoryAttributes {
 	__unsafe_unretained NSString *creationDate;
-	__unsafe_unretained NSString *foodId;
+	__unsafe_unretained NSString *foodCategoryId;
 	__unsafe_unretained NSString *modificationDate;
 	__unsafe_unretained NSString *name;
-} HANFoodAttributes;
+} HANFoodCategoryAttributes;
 
-extern const struct HANFoodRelationships {
-	__unsafe_unretained NSString *amount;
+extern const struct HANFoodCategoryRelationships {
+	__unsafe_unretained NSString *pyramCategory;
 	__unsafe_unretained NSString *type;
-} HANFoodRelationships;
+} HANFoodCategoryRelationships;
 
-@class HANFoodAmount;
+@class HANFoodPyramCategory;
 @class HANFoodType;
 
-@interface HANFoodID : NSManagedObjectID {}
+@interface HANFoodCategoryID : NSManagedObjectID {}
 @end
 
-@interface _HANFood : NSManagedObject {}
+@interface _HANFoodCategory : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) HANFoodID* objectID;
+@property (nonatomic, readonly, strong) HANFoodCategoryID* objectID;
 
 @property (nonatomic, strong) NSDate* creationDate;
 
 //- (BOOL)validateCreationDate:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSNumber* foodId;
+@property (nonatomic, strong) NSNumber* foodCategoryId;
 
-@property (atomic) int64_t foodIdValue;
-- (int64_t)foodIdValue;
-- (void)setFoodIdValue:(int64_t)value_;
+@property (atomic) int64_t foodCategoryIdValue;
+- (int64_t)foodCategoryIdValue;
+- (void)setFoodCategoryIdValue:(int64_t)value_;
 
-//- (BOOL)validateFoodId:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateFoodCategoryId:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSDate* modificationDate;
 
@@ -47,9 +47,9 @@ extern const struct HANFoodRelationships {
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) HANFoodAmount *amount;
+@property (nonatomic, strong) HANFoodPyramCategory *pyramCategory;
 
-//- (BOOL)validateAmount:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validatePyramCategory:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) HANFoodType *type;
 
@@ -57,16 +57,16 @@ extern const struct HANFoodRelationships {
 
 @end
 
-@interface _HANFood (CoreDataGeneratedPrimitiveAccessors)
+@interface _HANFoodCategory (CoreDataGeneratedPrimitiveAccessors)
 
 - (NSDate*)primitiveCreationDate;
 - (void)setPrimitiveCreationDate:(NSDate*)value;
 
-- (NSNumber*)primitiveFoodId;
-- (void)setPrimitiveFoodId:(NSNumber*)value;
+- (NSNumber*)primitiveFoodCategoryId;
+- (void)setPrimitiveFoodCategoryId:(NSNumber*)value;
 
-- (int64_t)primitiveFoodIdValue;
-- (void)setPrimitiveFoodIdValue:(int64_t)value_;
+- (int64_t)primitiveFoodCategoryIdValue;
+- (void)setPrimitiveFoodCategoryIdValue:(int64_t)value_;
 
 - (NSDate*)primitiveModificationDate;
 - (void)setPrimitiveModificationDate:(NSDate*)value;
@@ -74,8 +74,8 @@ extern const struct HANFoodRelationships {
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
 
-- (HANFoodAmount*)primitiveAmount;
-- (void)setPrimitiveAmount:(HANFoodAmount*)value;
+- (HANFoodPyramCategory*)primitivePyramCategory;
+- (void)setPrimitivePyramCategory:(HANFoodPyramCategory*)value;
 
 - (HANFoodType*)primitiveType;
 - (void)setPrimitiveType:(HANFoodType*)value;

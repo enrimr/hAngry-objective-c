@@ -8,13 +8,13 @@ extern const struct HANFoodAmountAttributes {
 	__unsafe_unretained NSString *creationDate;
 	__unsafe_unretained NSString *expirationDate;
 	__unsafe_unretained NSString *foodAmountId;
-	__unsafe_unretained NSString *measureUnit;
 	__unsafe_unretained NSString *modificationDate;
 	__unsafe_unretained NSString *price;
+	__unsafe_unretained NSString *unit;
 } HANFoodAmountAttributes;
 
 extern const struct HANFoodAmountRelationships {
-	__unsafe_unretained NSString *foods;
+	__unsafe_unretained NSString *food;
 } HANFoodAmountRelationships;
 
 @class HANFood;
@@ -52,10 +52,6 @@ extern const struct HANFoodAmountRelationships {
 
 //- (BOOL)validateFoodAmountId:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* measureUnit;
-
-//- (BOOL)validateMeasureUnit:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSDate* modificationDate;
 
 //- (BOOL)validateModificationDate:(id*)value_ error:(NSError**)error_;
@@ -68,9 +64,13 @@ extern const struct HANFoodAmountRelationships {
 
 //- (BOOL)validatePrice:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) HANFood *foods;
+@property (nonatomic, strong) NSString* unit;
 
-//- (BOOL)validateFoods:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateUnit:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) HANFood *food;
+
+//- (BOOL)validateFood:(id*)value_ error:(NSError**)error_;
 
 @end
 
@@ -94,9 +94,6 @@ extern const struct HANFoodAmountRelationships {
 - (int64_t)primitiveFoodAmountIdValue;
 - (void)setPrimitiveFoodAmountIdValue:(int64_t)value_;
 
-- (NSString*)primitiveMeasureUnit;
-- (void)setPrimitiveMeasureUnit:(NSString*)value;
-
 - (NSDate*)primitiveModificationDate;
 - (void)setPrimitiveModificationDate:(NSDate*)value;
 
@@ -106,7 +103,10 @@ extern const struct HANFoodAmountRelationships {
 - (float)primitivePriceValue;
 - (void)setPrimitivePriceValue:(float)value_;
 
-- (HANFood*)primitiveFoods;
-- (void)setPrimitiveFoods:(HANFood*)value;
+- (NSString*)primitiveUnit;
+- (void)setPrimitiveUnit:(NSString*)value;
+
+- (HANFood*)primitiveFood;
+- (void)setPrimitiveFood:(HANFood*)value;
 
 @end

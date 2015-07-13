@@ -1,5 +1,9 @@
 #import "_HANFoodPyramCategory.h"
 
 @interface HANFoodPyramCategory : _HANFoodPyramCategory {}
-// Custom logic goes here.
+
++(instancetype)foodPyramCategoryWithName:(NSString *)name
+                     foodPyramCategoryId:(NSNumber *)foodPyramCategoryId
+                                 context:(NSManagedObjectContext *)context;
+
 @end

@@ -8,13 +8,13 @@ const struct HANFoodAmountAttributes HANFoodAmountAttributes = {
 	.creationDate = @"creationDate",
 	.expirationDate = @"expirationDate",
 	.foodAmountId = @"foodAmountId",
-	.measureUnit = @"measureUnit",
 	.modificationDate = @"modificationDate",
 	.price = @"price",
+	.unit = @"unit",
 };
 
 const struct HANFoodAmountRelationships HANFoodAmountRelationships = {
-	.foods = @"foods",
+	.food = @"food",
 };
 
 @implementation HANFoodAmountID
@@ -106,8 +106,6 @@ const struct HANFoodAmountRelationships HANFoodAmountRelationships = {
 	[self setPrimitiveFoodAmountId:[NSNumber numberWithLongLong:value_]];
 }
 
-@dynamic measureUnit;
-
 @dynamic modificationDate;
 
 @dynamic price;
@@ -130,7 +128,9 @@ const struct HANFoodAmountRelationships HANFoodAmountRelationships = {
 	[self setPrimitivePrice:[NSNumber numberWithFloat:value_]];
 }
 
-@dynamic foods;
+@dynamic unit;
+
+@dynamic food;
 
 @end
 

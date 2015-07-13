@@ -5,16 +5,16 @@
 
 extern const struct HANFoodPyramCategoryAttributes {
 	__unsafe_unretained NSString *creationDate;
-	__unsafe_unretained NSString *foodPyramId;
+	__unsafe_unretained NSString *foodPyramCategoryId;
 	__unsafe_unretained NSString *modificationDate;
 	__unsafe_unretained NSString *name;
 } HANFoodPyramCategoryAttributes;
 
 extern const struct HANFoodPyramCategoryRelationships {
-	__unsafe_unretained NSString *types;
+	__unsafe_unretained NSString *category;
 } HANFoodPyramCategoryRelationships;
 
-@class HANFoodType;
+@class HANFoodCategory;
 
 @interface HANFoodPyramCategoryID : NSManagedObjectID {}
 @end
@@ -29,13 +29,13 @@ extern const struct HANFoodPyramCategoryRelationships {
 
 //- (BOOL)validateCreationDate:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSNumber* foodPyramId;
+@property (nonatomic, strong) NSNumber* foodPyramCategoryId;
 
-@property (atomic) int64_t foodPyramIdValue;
-- (int64_t)foodPyramIdValue;
-- (void)setFoodPyramIdValue:(int64_t)value_;
+@property (atomic) int64_t foodPyramCategoryIdValue;
+- (int64_t)foodPyramCategoryIdValue;
+- (void)setFoodPyramCategoryIdValue:(int64_t)value_;
 
-//- (BOOL)validateFoodPyramId:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateFoodPyramCategoryId:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSDate* modificationDate;
 
@@ -45,9 +45,9 @@ extern const struct HANFoodPyramCategoryRelationships {
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) HANFoodType *types;
+@property (nonatomic, strong) HANFoodCategory *category;
 
-//- (BOOL)validateTypes:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateCategory:(id*)value_ error:(NSError**)error_;
 
 @end
 
@@ -56,11 +56,11 @@ extern const struct HANFoodPyramCategoryRelationships {
 - (NSDate*)primitiveCreationDate;
 - (void)setPrimitiveCreationDate:(NSDate*)value;
 
-- (NSNumber*)primitiveFoodPyramId;
-- (void)setPrimitiveFoodPyramId:(NSNumber*)value;
+- (NSNumber*)primitiveFoodPyramCategoryId;
+- (void)setPrimitiveFoodPyramCategoryId:(NSNumber*)value;
 
-- (int64_t)primitiveFoodPyramIdValue;
-- (void)setPrimitiveFoodPyramIdValue:(int64_t)value_;
+- (int64_t)primitiveFoodPyramCategoryIdValue;
+- (void)setPrimitiveFoodPyramCategoryIdValue:(int64_t)value_;
 
 - (NSDate*)primitiveModificationDate;
 - (void)setPrimitiveModificationDate:(NSDate*)value;
@@ -68,7 +68,7 @@ extern const struct HANFoodPyramCategoryRelationships {
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
 
-- (HANFoodType*)primitiveTypes;
-- (void)setPrimitiveTypes:(HANFoodType*)value;
+- (HANFoodCategory*)primitiveCategory;
+- (void)setPrimitiveCategory:(HANFoodCategory*)value;
 
 @end

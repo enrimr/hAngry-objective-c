@@ -23,6 +23,9 @@
 /* Begin PBXBuildFile section */
 		E54D843B1B539FA900BBA2DF /* _HANFoodPyramCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D84381B539FA900BBA2DF /* _HANFoodPyramCategory.m */; };
 		E54D843C1B539FA900BBA2DF /* HANFoodPyramCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D843A1B539FA900BBA2DF /* HANFoodPyramCategory.m */; };
+		E54D84401B54492800BBA2DF /* HANInitDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D843F1B54492800BBA2DF /* HANInitDatabase.m */; };
+		E54D84451B544D6F00BBA2DF /* _HANFoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D84421B544D6F00BBA2DF /* _HANFoodCategory.m */; };
+		E54D84461B544D6F00BBA2DF /* HANFoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D84441B544D6F00BBA2DF /* HANFoodCategory.m */; };
 		E56A64BB1B52DDCD008E18AA /* ENRCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64BA1B52DDCD008E18AA /* ENRCoreDataTableViewController.m */; };
 		E56A64BE1B52E127008E18AA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E56A64BC1B52E127008E18AA /* Model.xcdatamodeld */; };
 		E56A64D01B52E95F008E18AA /* _HANFood.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A64C51B52E95F008E18AA /* _HANFood.m */; };
@@ -69,6 +72,12 @@
 		E54D84381B539FA900BBA2DF /* _HANFoodPyramCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _HANFoodPyramCategory.m; path = Models/_HANFoodPyramCategory.m; sourceTree = "<group>"; };
 		E54D84391B539FA900BBA2DF /* HANFoodPyramCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANFoodPyramCategory.h; path = Models/HANFoodPyramCategory.h; sourceTree = "<group>"; };
 		E54D843A1B539FA900BBA2DF /* HANFoodPyramCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFoodPyramCategory.m; path = Models/HANFoodPyramCategory.m; sourceTree = "<group>"; };
+		E54D843E1B54492800BBA2DF /* HANInitDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANInitDatabase.h; path = Models/Init/HANInitDatabase.h; sourceTree = "<group>"; };
+		E54D843F1B54492800BBA2DF /* HANInitDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANInitDatabase.m; path = Models/Init/HANInitDatabase.m; sourceTree = "<group>"; };
+		E54D84411B544D6F00BBA2DF /* _HANFoodCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _HANFoodCategory.h; path = Models/_HANFoodCategory.h; sourceTree = "<group>"; };
+		E54D84421B544D6F00BBA2DF /* _HANFoodCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _HANFoodCategory.m; path = Models/_HANFoodCategory.m; sourceTree = "<group>"; };
+		E54D84431B544D6F00BBA2DF /* HANFoodCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HANFoodCategory.h; path = Models/HANFoodCategory.h; sourceTree = "<group>"; };
+		E54D84441B544D6F00BBA2DF /* HANFoodCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HANFoodCategory.m; path = Models/HANFoodCategory.m; sourceTree = "<group>"; };
 		E56A64B91B52DDCD008E18AA /* ENRCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENRCoreDataTableViewController.h; path = Controllers/ENRCoreDataTableViewController.h; sourceTree = "<group>"; };
 		E56A64BA1B52DDCD008E18AA /* ENRCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ENRCoreDataTableViewController.m; path = Controllers/ENRCoreDataTableViewController.m; sourceTree = "<group>"; };
 		E56A64BD1B52E127008E18AA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -138,6 +147,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E54D843D1B5448FA00BBA2DF /* Init */ = {
+			isa = PBXGroup;
+			children = (
+				E54D843E1B54492800BBA2DF /* HANInitDatabase.h */,
+				E54D843F1B54492800BBA2DF /* HANInitDatabase.m */,
+			);
+			name = Init;
+			sourceTree = "<group>";
+		};
 		E5FA2FAF1B47DECB00787B3C = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +228,11 @@
 		E5FA2FFD1B47E0D800787B3C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E54D84411B544D6F00BBA2DF /* _HANFoodCategory.h */,
+				E54D84421B544D6F00BBA2DF /* _HANFoodCategory.m */,
+				E54D84431B544D6F00BBA2DF /* HANFoodCategory.h */,
+				E54D84441B544D6F00BBA2DF /* HANFoodCategory.m */,
+				E54D843D1B5448FA00BBA2DF /* Init */,
 				E54D84371B539FA900BBA2DF /* _HANFoodPyramCategory.h */,
 				E54D84381B539FA900BBA2DF /* _HANFoodPyramCategory.m */,
 				E54D84391B539FA900BBA2DF /* HANFoodPyramCategory.h */,
@@ -441,7 +464,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56A64D21B52E95F008E18AA /* _HANFoodType.m in Sources */,
+				E54D84461B544D6F00BBA2DF /* HANFoodCategory.m in Sources */,
 				E56A64D41B52E95F008E18AA /* HANFoodAmount.m in Sources */,
+				E54D84451B544D6F00BBA2DF /* _HANFoodCategory.m in Sources */,
 				E5FA2FC01B47DECB00787B3C /* ATLAppDelegate.m in Sources */,
 				E56A64D01B52E95F008E18AA /* _HANFood.m in Sources */,
 				E56A64BB1B52DDCD008E18AA /* ENRCoreDataTableViewController.m in Sources */,
@@ -452,6 +477,7 @@
 				E56A64D81B52EB19008E18AA /* HANFoodTableViewController.m in Sources */,
 				E56A64BE1B52E127008E18AA /* Model.xcdatamodeld in Sources */,
 				E56A64D31B52E95F008E18AA /* HANFood.m in Sources */,
+				E54D84401B54492800BBA2DF /* HANInitDatabase.m in Sources */,
 				E56A64D51B52E95F008E18AA /* HANFoodType.m in Sources */,
 				E5FA30021B47E0F000787B3C /* ENRSimpleCoreDataStack.m in Sources */,
 				E5FA300A1B47E94E00787B3C /* HANDefinitions.m in Sources */,

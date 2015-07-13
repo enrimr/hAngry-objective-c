@@ -15,7 +15,7 @@ extern const struct HANFoodTypeRelationships {
 	__unsafe_unretained NSString *food;
 } HANFoodTypeRelationships;
 
-@class HANFoodPyramCategory;
+@class HANFoodCategory;
 @class HANFood;
 
 @interface HANFoodTypeID : NSManagedObjectID {}
@@ -47,7 +47,7 @@ extern const struct HANFoodTypeRelationships {
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) HANFoodPyramCategory *category;
+@property (nonatomic, strong) HANFoodCategory *category;
 
 //- (BOOL)validateCategory:(id*)value_ error:(NSError**)error_;
 
@@ -74,8 +74,8 @@ extern const struct HANFoodTypeRelationships {
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
 
-- (HANFoodPyramCategory*)primitiveCategory;
-- (void)setPrimitiveCategory:(HANFoodPyramCategory*)value;
+- (HANFoodCategory*)primitiveCategory;
+- (void)setPrimitiveCategory:(HANFoodCategory*)value;
 
 - (HANFood*)primitiveFood;
 - (void)setPrimitiveFood:(HANFood*)value;

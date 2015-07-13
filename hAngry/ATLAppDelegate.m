@@ -10,8 +10,8 @@
 #import "ENRSimpleCoreDataStack.h"
 #import "HANFoodTableViewController.h"
 #import "HANFood.h"
-#import "HANFoodType.h"
-#import "HANFoodAMount.h"
+#import "HANInitDatabase.h"
+
 
 @interface ATLAppDelegate ()
 
@@ -23,12 +23,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.model = [ENRSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
-    [self initDataBase];
+    HANInitDatabase *init = [[HANInitDatabase alloc] init];
+    [init initDatabase];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[HANFood entityName]];
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:HANFoodAttributes.updateDate
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:HANFoodAttributes.modificationDate
                                                               ascending:NO],
                                 [NSSortDescriptor sortDescriptorWithKey:HANFoodAttributes.name
                                                               ascending:YES]];
@@ -78,33 +79,6 @@
 }
 
 #pragma mark - InitDatabase
--(void)initDataBase{
-    [self initFoodType];
-}
 
--(void)initFoodType{
-    /*NSManagedObject *foodType = [NSEntityDescription insertNewObjectForEntityForName:[HANFoodType entityName]
-                                                          inManagedObjectContext:self.model.context];
-    
-    [foodType setValue:@"milk" forKey:HANFoodTypeAttributes.name];
-    [foodType setValue:@0 forKey:HANFoodTypeAttributes.foodTypeId];*/
-    
-    HANFoodType *foodType = [HANFoodType foodTypeWithName:@"Bread"
-                                               foodTypeId:@0
-                                                  context:self.model.context];
-    
-    /*foodType.name = @"Breads, cereals, potatoes, pasta and rice";
-    foodType.foodTypeId = @0;
-    
-    foodType.name = @"Fruit and vegetables";
-    foodType.foodTypeId = @1;
-    
-    foodType.name = @"Milk, yoghurt and cheese";
-    foodType.foodTypeId = @2;
-    
-    foodType.name = @"Milk, poultry, fish, egs, beans and nuts";
-    foodType.name = @"Reduced fat spreads and oils";
-    foodType.name = @"Foods and drinks high in fat";*/
-}
 
 @end

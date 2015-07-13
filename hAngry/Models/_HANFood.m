@@ -11,7 +11,7 @@ const struct HANFoodAttributes HANFoodAttributes = {
 };
 
 const struct HANFoodRelationships HANFoodRelationships = {
-	.availableAmount = @"availableAmount",
+	.amount = @"amount",
 	.type = @"type",
 };
 
@@ -76,7 +76,7 @@ const struct HANFoodRelationships HANFoodRelationships = {
 
 @dynamic name;
 
-@dynamic availableAmount;
+@dynamic amount;
 
 @dynamic type;
 

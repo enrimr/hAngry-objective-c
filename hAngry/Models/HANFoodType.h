@@ -5,6 +5,7 @@
 
 +(instancetype)foodTypeWithName:(NSString *)name
                      foodTypeId:(NSNumber *)foodTypeId
+                       category:(HANFoodCategory *)category
                         context:(NSManagedObjectContext *)context;
 
 @end

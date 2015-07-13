@@ -5,13 +5,13 @@
 
 const struct HANFoodPyramCategoryAttributes HANFoodPyramCategoryAttributes = {
 	.creationDate = @"creationDate",
-	.foodPyramId = @"foodPyramId",
+	.foodPyramCategoryId = @"foodPyramCategoryId",
 	.modificationDate = @"modificationDate",
 	.name = @"name",
 };
 
 const struct HANFoodPyramCategoryRelationships HANFoodPyramCategoryRelationships = {
-	.types = @"types",
+	.category = @"category",
 };
 
 @implementation HANFoodPyramCategoryID
@@ -40,8 +40,8 @@ const struct HANFoodPyramCategoryRelationships HANFoodPyramCategoryRelationships
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 
-	if ([key isEqualToString:@"foodPyramIdValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"foodPyramId"];
+	if ([key isEqualToString:@"foodPyramCategoryIdValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"foodPyramCategoryId"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -51,31 +51,31 @@ const struct HANFoodPyramCategoryRelationships HANFoodPyramCategoryRelationships
 
 @dynamic creationDate;
 
-@dynamic foodPyramId;
+@dynamic foodPyramCategoryId;
 
-- (int64_t)foodPyramIdValue {
-	NSNumber *result = [self foodPyramId];
+- (int64_t)foodPyramCategoryIdValue {
+	NSNumber *result = [self foodPyramCategoryId];
 	return [result longLongValue];
 }
 
-- (void)setFoodPyramIdValue:(int64_t)value_ {
-	[self setFoodPyramId:[NSNumber numberWithLongLong:value_]];
+- (void)setFoodPyramCategoryIdValue:(int64_t)value_ {
+	[self setFoodPyramCategoryId:[NSNumber numberWithLongLong:value_]];
 }
 
-- (int64_t)primitiveFoodPyramIdValue {
-	NSNumber *result = [self primitiveFoodPyramId];
+- (int64_t)primitiveFoodPyramCategoryIdValue {
+	NSNumber *result = [self primitiveFoodPyramCategoryId];
 	return [result longLongValue];
 }
 
-- (void)setPrimitiveFoodPyramIdValue:(int64_t)value_ {
-	[self setPrimitiveFoodPyramId:[NSNumber numberWithLongLong:value_]];
+- (void)setPrimitiveFoodPyramCategoryIdValue:(int64_t)value_ {
+	[self setPrimitiveFoodPyramCategoryId:[NSNumber numberWithLongLong:value_]];
 }
 
 @dynamic modificationDate;
 
 @dynamic name;
 
-@dynamic types;
+@dynamic category;
 
 @end
 
