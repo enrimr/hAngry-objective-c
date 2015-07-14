@@ -35,18 +35,18 @@
     _foodCategory.text = _food.type.category.name;
     _foodPyramCategory.text = _food.type.category.pyramCategory.name;
     
-    __block int totalAmount = 0;
+    __block NSNumber *totalAmount = @(0);
     __block NSString *unit = @"";
     [_food.amounts enumerateObjectsUsingBlock:^(HANFoodAmount *obj, BOOL * __nonnull stop) {
-        totalAmount += [obj.amount intValue];
+        totalAmount = [NSNumber numberWithFloat:([totalAmount floatValue] + [obj.amount floatValue])];
         if ([unit  isEqual:@""]) {
             unit = obj.unit;
         }
     }];
     
-    _availableAmount.text = [NSString stringWithFormat:@"%d %@", totalAmount, unit];
+    _availableAmount.text = [NSString stringWithFormat:@"%@ %@", totalAmount, unit];
     
-    /*NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[HANFood entityName]];
+    /*NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[HANFoodAmount entityName]];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"food.foodId == %@", _food.foodId]];
     request.predicate = predicate;
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:HANFoodAmountAttributes.creationDate
