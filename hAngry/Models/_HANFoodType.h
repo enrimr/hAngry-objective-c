@@ -12,7 +12,7 @@ extern const struct HANFoodTypeAttributes {
 
 extern const struct HANFoodTypeRelationships {
 	__unsafe_unretained NSString *category;
-	__unsafe_unretained NSString *food;
+	__unsafe_unretained NSString *foods;
 } HANFoodTypeRelationships;
 
 @class HANFoodCategory;
@@ -51,9 +51,17 @@ extern const struct HANFoodTypeRelationships {
 
 //- (BOOL)validateCategory:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) HANFood *food;
+@property (nonatomic, strong) NSSet *foods;
 
-//- (BOOL)validateFood:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)foodsSet;
+
+@end
+
+@interface _HANFoodType (FoodsCoreDataGeneratedAccessors)
+- (void)addFoods:(NSSet*)value_;
+- (void)removeFoods:(NSSet*)value_;
+- (void)addFoodsObject:(HANFood*)value_;
+- (void)removeFoodsObject:(HANFood*)value_;
 
 @end
 
@@ -77,7 +85,7 @@ extern const struct HANFoodTypeRelationships {
 - (HANFoodCategory*)primitiveCategory;
 - (void)setPrimitiveCategory:(HANFoodCategory*)value;
 
-- (HANFood*)primitiveFood;
-- (void)setPrimitiveFood:(HANFood*)value;
+- (NSMutableSet*)primitiveFoods;
+- (void)setPrimitiveFoods:(NSMutableSet*)value;
 
 @end

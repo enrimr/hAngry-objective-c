@@ -11,7 +11,7 @@ extern const struct HANFoodAttributes {
 } HANFoodAttributes;
 
 extern const struct HANFoodRelationships {
-	__unsafe_unretained NSString *amount;
+	__unsafe_unretained NSString *amounts;
 	__unsafe_unretained NSString *type;
 } HANFoodRelationships;
 
@@ -47,13 +47,21 @@ extern const struct HANFoodRelationships {
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) HANFoodAmount *amount;
+@property (nonatomic, strong) NSSet *amounts;
 
-//- (BOOL)validateAmount:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)amountsSet;
 
 @property (nonatomic, strong) HANFoodType *type;
 
 //- (BOOL)validateType:(id*)value_ error:(NSError**)error_;
+
+@end
+
+@interface _HANFood (AmountsCoreDataGeneratedAccessors)
+- (void)addAmounts:(NSSet*)value_;
+- (void)removeAmounts:(NSSet*)value_;
+- (void)addAmountsObject:(HANFoodAmount*)value_;
+- (void)removeAmountsObject:(HANFoodAmount*)value_;
 
 @end
 
@@ -74,8 +82,8 @@ extern const struct HANFoodRelationships {
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
 
-- (HANFoodAmount*)primitiveAmount;
-- (void)setPrimitiveAmount:(HANFoodAmount*)value;
+- (NSMutableSet*)primitiveAmounts;
+- (void)setPrimitiveAmounts:(NSMutableSet*)value;
 
 - (HANFoodType*)primitiveType;
 - (void)setPrimitiveType:(HANFoodType*)value;

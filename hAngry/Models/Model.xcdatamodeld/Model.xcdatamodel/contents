@@ -5,8 +5,8 @@
         <attribute name="foodId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="amount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodAmount" inverseName="food" inverseEntity="FoodAmount" syncable="YES"/>
-        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodType" inverseName="food" inverseEntity="FoodType" syncable="YES"/>
+        <relationship name="amounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FoodAmount" inverseName="food" inverseEntity="FoodAmount" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodType" inverseName="foods" inverseEntity="FoodType" syncable="YES"/>
     </entity>
     <entity name="FoodAmount" representedClassName="HANFoodAmount" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -16,30 +16,30 @@
         <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="food" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="amount" inverseEntity="Food" syncable="YES"/>
+        <relationship name="food" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="amounts" inverseEntity="Food" syncable="YES"/>
     </entity>
     <entity name="FoodCategory" representedClassName="HANFoodCategory" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="foodCategoryId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="pyramCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodPyramCategory" inverseName="category" inverseEntity="FoodPyramCategory" syncable="YES"/>
-        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodType" inverseName="category" inverseEntity="FoodType" syncable="YES"/>
+        <relationship name="pyramCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodPyramCategory" inverseName="categories" inverseEntity="FoodPyramCategory" syncable="YES"/>
+        <relationship name="types" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FoodType" inverseName="category" inverseEntity="FoodType" syncable="YES"/>
     </entity>
     <entity name="FoodPyramCategory" representedClassName="HANFoodPyramCategory" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="foodPyramCategoryId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodCategory" inverseName="pyramCategory" inverseEntity="FoodCategory" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FoodCategory" inverseName="pyramCategory" inverseEntity="FoodCategory" syncable="YES"/>
     </entity>
     <entity name="FoodType" representedClassName="HANFoodType" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="foodTypeId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="modificationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodCategory" inverseName="type" inverseEntity="FoodCategory" syncable="YES"/>
-        <relationship name="food" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="type" inverseEntity="Food" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodCategory" inverseName="types" inverseEntity="FoodCategory" syncable="YES"/>
+        <relationship name="foods" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Food" inverseName="type" inverseEntity="Food" syncable="YES"/>
     </entity>
     <elements>
         <element name="Food" positionX="-63" positionY="-18" width="128" height="135"/>

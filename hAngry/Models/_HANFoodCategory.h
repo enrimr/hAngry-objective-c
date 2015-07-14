@@ -12,7 +12,7 @@ extern const struct HANFoodCategoryAttributes {
 
 extern const struct HANFoodCategoryRelationships {
 	__unsafe_unretained NSString *pyramCategory;
-	__unsafe_unretained NSString *type;
+	__unsafe_unretained NSString *types;
 } HANFoodCategoryRelationships;
 
 @class HANFoodPyramCategory;
@@ -51,9 +51,17 @@ extern const struct HANFoodCategoryRelationships {
 
 //- (BOOL)validatePyramCategory:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) HANFoodType *type;
+@property (nonatomic, strong) NSSet *types;
 
-//- (BOOL)validateType:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)typesSet;
+
+@end
+
+@interface _HANFoodCategory (TypesCoreDataGeneratedAccessors)
+- (void)addTypes:(NSSet*)value_;
+- (void)removeTypes:(NSSet*)value_;
+- (void)addTypesObject:(HANFoodType*)value_;
+- (void)removeTypesObject:(HANFoodType*)value_;
 
 @end
 
@@ -77,7 +85,7 @@ extern const struct HANFoodCategoryRelationships {
 - (HANFoodPyramCategory*)primitivePyramCategory;
 - (void)setPrimitivePyramCategory:(HANFoodPyramCategory*)value;
 
-- (HANFoodType*)primitiveType;
-- (void)setPrimitiveType:(HANFoodType*)value;
+- (NSMutableSet*)primitiveTypes;
+- (void)setPrimitiveTypes:(NSMutableSet*)value;
 
 @end

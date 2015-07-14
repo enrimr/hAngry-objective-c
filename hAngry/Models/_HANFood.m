@@ -11,7 +11,7 @@ const struct HANFoodAttributes HANFoodAttributes = {
 };
 
 const struct HANFoodRelationships HANFoodRelationships = {
-	.amount = @"amount",
+	.amounts = @"amounts",
 	.type = @"type",
 };
 
@@ -76,7 +76,16 @@ const struct HANFoodRelationships HANFoodRelationships = {
 
 @dynamic name;
 
-@dynamic amount;
+@dynamic amounts;
+
+- (NSMutableSet*)amountsSet {
+	[self willAccessValueForKey:@"amounts"];
+
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"amounts"];
+
+	[self didAccessValueForKey:@"amounts"];
+	return result;
+}
 
 @dynamic type;
 

@@ -12,7 +12,7 @@ const struct HANFoodTypeAttributes HANFoodTypeAttributes = {
 
 const struct HANFoodTypeRelationships HANFoodTypeRelationships = {
 	.category = @"category",
-	.food = @"food",
+	.foods = @"foods",
 };
 
 @implementation HANFoodTypeID
@@ -78,7 +78,16 @@ const struct HANFoodTypeRelationships HANFoodTypeRelationships = {
 
 @dynamic category;
 
-@dynamic food;
+@dynamic foods;
+
+- (NSMutableSet*)foodsSet {
+	[self willAccessValueForKey:@"foods"];
+
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"foods"];
+
+	[self didAccessValueForKey:@"foods"];
+	return result;
+}
 
 @end
 

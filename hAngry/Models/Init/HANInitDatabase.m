@@ -29,52 +29,51 @@
 
 -(void)initDatabase{
     _appDelegate = [UIApplication sharedApplication].delegate;
+    [_appDelegate.model zapAllData];
     
-    [self initFoodPyramCategory];
-    [self initFoodCategory];
-    [self initFoodType];
-    [self initFood];
-    [self initFoodAmount];
-}
-
--(void)initFoodPyramCategory{
-
-    [HANFoodPyramCategory foodPyramCategoryWithName:@"Breads, cereals, potatoes, pasta and rice"
+    // Pyram Category
+    HANFoodPyramCategory *pyramBread = [HANFoodPyramCategory foodPyramCategoryWithName:@"Breads, cereals, potatoes, pasta and rice"
                                 foodPyramCategoryId:@0
                                             context:_appDelegate.model.context];
     
-    [HANFoodPyramCategory foodPyramCategoryWithName:@"Fruit and vegetables"
+    HANFoodPyramCategory *pyramFruit = [HANFoodPyramCategory foodPyramCategoryWithName:@"Fruit and vegetables"
                                 foodPyramCategoryId:@1
                                             context:_appDelegate.model.context];
     
-    [HANFoodPyramCategory foodPyramCategoryWithName:@"Milk, yoghurt and cheese"
+    HANFoodPyramCategory *pyramMilk = [HANFoodPyramCategory foodPyramCategoryWithName:@"Milk, yoghurt and cheese"
                                 foodPyramCategoryId:@2
                                             context:_appDelegate.model.context];
     
-    [HANFoodPyramCategory foodPyramCategoryWithName:@"Meat, poultry, fish, eggs, beans and nuts"
+    HANFoodPyramCategory *pyramMeat = [HANFoodPyramCategory foodPyramCategoryWithName:@"Meat, poultry, fish, eggs, beans and nuts"
                                 foodPyramCategoryId:@3
                                             context:_appDelegate.model.context];
     
-    [HANFoodPyramCategory foodPyramCategoryWithName:@"Reduced fat spreads and oils"
+    HANFoodPyramCategory *pyramOils = [HANFoodPyramCategory foodPyramCategoryWithName:@"Reduced fat spreads and oils"
                                 foodPyramCategoryId:@4
                                             context:_appDelegate.model.context];
     
-    [HANFoodPyramCategory foodPyramCategoryWithName:@"Foods and drinks high in fat"
+    HANFoodPyramCategory *pyramFat = [HANFoodPyramCategory foodPyramCategoryWithName:@"Foods and drinks high in fat"
                                 foodPyramCategoryId:@5
                                             context:_appDelegate.model.context];
-}
 
--(void)initFoodCategory{
     
-    [HANFoodCategory foodCategoryWithName:@"Fruit" foodCategoryId:@0 pyramCategory:
-    [HANFoodPyramCategory foodPyramCategoryWithName:@"Milk, yoghurt and cheese"
-                                foodPyramCategoryId:@2
-                                            context:_appDelegate.model.context]
-                                  context:_appDelegate.model.context];
-}
+    
+    // Food Category
+    HANFoodCategory *categoryMilk = [HANFoodCategory foodCategoryWithName:@"Milk"
+                                                           foodCategoryId:@0
+                                                            pyramCategory:pyramMilk
+                                                                  context:_appDelegate.model.context];
+    
+    HANFoodCategory *categoryCoffee = [HANFoodCategory foodCategoryWithName:@"Coffee"
+                                                           foodCategoryId:@1
+                                                            pyramCategory:pyramBread
+                                                                  context:_appDelegate.model.context];
 
--(void)initFoodType{
-    
+    // FoodType
+    HANFoodType *typeSemiMilk = [HANFoodType foodTypeWithName:@"Semi-skimmed Milk"
+                                                   foodTypeId:@0
+                                                     category:categoryMilk
+                                                      context:_appDelegate.model.context];
     /*
      Ultramarinos Salado
      Ultramarinos Dulce
@@ -89,25 +88,42 @@
      Congelados
      */
     
-    /*NSManagedObject *foodType = [NSEntityDescription insertNewObjectForEntityForName:[HANFoodType entityName]
-     inManagedObjectContext:self.model.context];
-     
-     [foodType setValue:@"milk" forKey:HANFoodTypeAttributes.name];
-     [foodType setValue:@0 forKey:HANFoodTypeAttributes.foodTypeId];*/
+    // Food
+    HANFood *carrefourMilk = [HANFood foodWithName:@"Carrefour Milk"
+                                            foodId:@0
+                                              type:typeSemiMilk
+                                           context:_appDelegate.model.context];
     
-    /*HANFoodType *foodType = [HANFoodType foodTypeWithName:@"Bread"
-                                               foodTypeId:@0
-                                                  context:appDelegate.model.context];*/
-    
-}
+    HANFood *nestleMilk = [HANFood foodWithName:@"Nestlé Milk"
+                                            foodId:@1
+                                              type:typeSemiMilk
+                                           context:_appDelegate.model.context];
 
--(void)initFood{
     
+    // FoodAmount
+    [HANFoodAmount foodAmountWithFood:carrefourMilk
+                               amount:@(3)
+                                 unit:@"l"
+                                price:@(0.78)
+                         foodAmountId:@0
+                       expirationDate:[NSDate date]
+                              context:_appDelegate.model.context];
     
-}
-
--(void)initFoodAmount{
+    [HANFoodAmount foodAmountWithFood:carrefourMilk
+                               amount:@(4.5)
+                                 unit:@"l"
+                                price:@(1.41)
+                         foodAmountId:@1
+                       expirationDate:[NSDate date]
+                              context:_appDelegate.model.context];
     
+    [HANFoodAmount foodAmountWithFood:carrefourMilk
+                               amount:@(0.75)
+                                 unit:@"l"
+                                price:@(0.23)
+                         foodAmountId:@1
+                       expirationDate:[NSDate date]
+                              context:_appDelegate.model.context];
     
 }
 
